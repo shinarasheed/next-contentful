@@ -37,14 +37,8 @@ const client = createClient({
 });
 
 export default function RecipeDetails({ recipe }) {
-  const {
-    featuredImage,
-    title,
-    cookingTime,
-    description,
-    ingredients,
-    method,
-  } = recipe.fields;
+  const { featuredImage, title, cookingTime, ingredients, method } =
+    recipe.fields;
   return (
     <div>
       <div className="banner">
