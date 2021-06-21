@@ -10,14 +10,13 @@ export async function getStaticProps() {
   const res = await client.getEntries({ content_type: 'recipe' });
 
   return {
-    props: {
-      recipes: res.items,
-      // after the first refresh or request. check the data source after 1 second to see
-      //if the data has changed after the last build. if it has regenerate the page that uses the data
+    props: { recipes: res.items },
 
-      //and it will only generate for pages that already exist
-      revalidate: 10,
-    },
+    // after the first refresh or request. check the data source after 1 second to see
+    //if the data has changed after the last build. if it has regenerate the page that uses the data
+
+    //and it will only generate for pages that already exist
+    revalidate: 10,
   };
 }
 
