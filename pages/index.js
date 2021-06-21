@@ -16,7 +16,7 @@ export async function getStaticProps() {
     //if the data has changed after the last build. if it has regenerate the page that uses the data
 
     //and it will only generate for pages that already exist
-    revalidate: 10,
+    revalidate: 1,
   };
 }
 
