@@ -29,6 +29,7 @@ export const getStaticProps = async (context) => {
     'fields.slug': params.slug,
   });
 
+  // conditional redirect if the recipe does not exist
   if (!items.length) {
     return {
       redirect: {
