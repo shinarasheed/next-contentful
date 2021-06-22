@@ -30,6 +30,7 @@ export const getStaticProps = async (context) => {
   });
 
   // conditional redirect if the recipe does not exist
+  //this works with the fallback pages
   if (!items.length) {
     return {
       redirect: {
