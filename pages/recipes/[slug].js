@@ -1,6 +1,7 @@
 import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
+import Skeleton from '../../components/Skeleton';
 
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
@@ -15,7 +16,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -40,6 +41,9 @@ const client = createClient({
 export default function RecipeDetails({ recipe }) {
   const { featuredImage, title, cookingTime, ingredients, method } =
     recipe.fields;
+
+  if (!recipe) return <Skeleton />;
+
   return (
     <div>
       <div className="banner">
