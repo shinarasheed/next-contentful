@@ -15,7 +15,7 @@ const Skeleton = () => {
         .skeleton > div {
           background: #dbcc1a;
           border-radius: 4px;
-          margin: 20px 0;
+          margin: 21px 0;
         }
         .s-banner {
           padding: 12% 0;
