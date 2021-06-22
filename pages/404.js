@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const NotFound = () => {
   const router = useRouter();
-  //redirect the user to the homepage after 3 seconds
   useEffect(() => {
     setTimeout(() => {
       router.push('/');
